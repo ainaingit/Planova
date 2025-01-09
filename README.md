@@ -17,7 +17,8 @@ Planova is an advanced task management application built with pure JavaScript fo
 
 ## 📸 Screenshots  
 ### Dashboard View  
-![Planova Dashboard](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)  
+![Task Screenshot](image/Capture%20d'écran%202025-01-09%20125943.png)
+
 _An intuitive dashboard to manage your tasks efficiently._  
 
 ### Task Details  
