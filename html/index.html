@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planova - Gestion de tâches</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Planova - Gestion de tâches</h1>
+    </header>
+    <main>
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Nouvelle tâche..." required>
+            <button type="submit">Ajouter</button>
+        </form>
+        <div id="task-container"></div>
+    </main>
+
+    <!-- Charger les scripts JavaScript -->
+    <script src="../js/model/TaskModel.js"></script>
+    <script src="../js/view/TaskView.js"></script>
+    <script src="../js/controller/TaskController.js"></script>
+</body>
+</html>
