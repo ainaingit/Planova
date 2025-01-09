@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planova - Gestion de tâches</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Planova - Gestion de Tâches</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Planova - Gestion de tâches</h1>
-    </header>
-    <main>
-        <form id="task-form">
-            <input type="text" id="task-title" placeholder="Nouvelle tâche..." required>
-            <button type="submit">Ajouter</button>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Planova - Gestion de Tâches</h1>
+        
+        <!-- Formulaire pour ajouter une tâche -->
+        <form id="task-form" class="mb-3">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="task-title" class="form-control" placeholder="Nouvelle tâche..." required>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+                </div>
+            </div>
         </form>
-        <div id="task-container"></div>
-    </main>
 
-    <!-- Charger les scripts JavaScript -->
+        <!-- Filtre de statut -->
+        <div class="mb-3">
+            <label for="filter-status">Filtrer par statut :</label>
+            <select id="filter-status" class="form-control w-25">
+                <option value="all">Tous</option>
+                <option value="à faire">À faire</option>
+                <option value="en cours">En cours</option>
+                <option value="terminée">Terminée</option>
+            </select>
+        </div>
+
+        <!-- Tableau des tâches -->
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-container">
+                <!-- Les tâches seront affichées ici -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script src="../js/model/TaskModel.js"></script>
     <script src="../js/view/TaskView.js"></script>
     <script src="../js/controller/TaskController.js"></script>
