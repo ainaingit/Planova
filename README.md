@@ -37,3 +37,9 @@ _View detailed information about each task and update it in real-time._
 1. Clone the repository:  
    ```bash
    git clone https://github.com/ainaingit/Planova.git
+
+
+Lessons :
+  - Localstorage : The data in localStorage is stored as strings. If you want to store objects or arrays, you need to convert them to JSON (using JSON.stringify) and then parse them back (using JSON.parse) when you retrieve them.
+
+   ( Les données dans localStorage sont stockées sous forme de chaînes de caractères. Si tu veux stocker des objets ou des tableaux, tu dois les convertir en JSON (en utilisant JSON.stringify) et les reconvertir (avec JSON.parse) lorsque tu les récupères. )
