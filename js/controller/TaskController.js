@@ -47,6 +47,14 @@ class TaskController {
 
             this.view.displayTasks(filteredTasks);
         });
+
+        // Supprimer une tâche
+        document.getElementById('deleteAllTasksBtn').addEventListener('click', event => {
+            if (event.target.tagName === 'BUTTON') {
+                this.model.deleteAllTaskFromLocalstorage(alert("Localstorage data deleted"));
+                this.view.displayTasks(this.model.tasks);
+            }
+        });
     }
 }
 

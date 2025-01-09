@@ -16,7 +16,9 @@ class TaskModel {
     updateLocalStorage() {
         localStorage.setItem('tasks', JSON.stringify(this.tasks));
     }
-
+    deleteAllTaskFromLocalstorage(){
+        localStorage.clear() ;
+    }
     // Fonction pour changer le statut d'une tâche
     updateStatus(taskId, newStatus) {
         const task = this.tasks.find(task => task.id === taskId);
